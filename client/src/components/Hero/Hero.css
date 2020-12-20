@@ -1,0 +1,426 @@
+.hero {
+  color: #fff;
+  padding: 160px 0;
+}
+
+.hero-inner {
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  margin-right: -10px;
+  margin-bottom: -15px;
+  margin-left: -10px;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.col {
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 1;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+
+.hero-content-inner {
+  max-width: 540px;
+  padding-top: 0;
+  padding-bottom: 60px;
+}
+
+.hero-content-inner h1 {
+  color: #323232;
+  width: 480px;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.hero-content-line {
+  margin: 0;
+  height: 44px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-row {
+  position: relative;
+  width: 120px;
+}
+
+.btn-row button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.btn-row button:focus {
+  outline: none;
+}
+
+.arrow-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #007fff;
+  height: 42px;
+  width: 42px;
+  border-radius: 100px;
+  left: 80px;
+}
+
+.hero-images {
+  max-width: 95%;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.hero-images-inner {
+  position: relative;
+  top: -30px;
+  left: 50px;
+}
+
+.hero-back {
+  width: 100%;
+  position: relative;
+  top: -20px;
+  left: 0;
+}
+
+.hero-front {
+  position: absolute;
+  width: 100%;
+  top: -90px;
+  left: -60px;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 400px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-content-inner h1 {
+    width: 400px;
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 500px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-images-inner {
+    top: -30px;
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 887px) {
+  .col {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 500px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-content-line {
+    height: 55px;
+  }
+
+  .hero-content-inner h1 {
+    width: 600px;
+    font-size: 42px;
+  }
+
+  .hero-images-inner {
+    width: 100%;
+    height: 370px;
+  }
+
+  .hero-images {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-bottom: 0px;
+  }
+  .col {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 500px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-content-inner h1 {
+    width: 383px;
+    font-size: 30px;
+  }
+
+  .hero-images-inner {
+    width: 100%;
+    height: 400px;
+  }
+
+  .hero-content-line {
+    height: 55px;
+  }
+
+  .hero-images {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .hero {
+    padding-bottom: 10px;
+  }
+
+  .col {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 400px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-images-inner {
+    height: 300px;
+  }
+
+  .hero-content-inner h1 {
+    width: 365px;
+    font-size: 25px;
+  }
+
+  .hero-content-line {
+    height: 55px;
+  }
+
+  .hero-images {
+    margin-top: 50px;
+  }
+
+  .hero-back {
+    top: -20px;
+    left: -10px;
+  }
+  .hero-front {
+    top: -40px;
+    left: -90px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero {
+    padding-bottom: 0px;
+  }
+  .col {
+    height: 270px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 400px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-content-inner h1 {
+    width: 300px;
+    font-size: 23px;
+  }
+
+  .hero-content-line {
+    height: 50px;
+  }
+
+  .hero-images-inner {
+    height: 300px;
+  }
+
+  .hero-images {
+    margin-top: 50px;
+  }
+
+  .hero-back {
+    top: -10px;
+    right: -30px;
+  }
+  .hero-front {
+    top: -40px;
+    left: -90px;
+  }
+}
+
+@media screen and (max-width: 363px) {
+  .col {
+    height: 250px;
+    margin-bottom: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 400px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-content-inner h1 {
+    width: 250px;
+    font-size: 15px;
+  }
+
+  .hero-content-line {
+    height: 50px;
+  }
+
+  .hero-images {
+    margin-top: 50px;
+  }
+
+  .hero-back {
+    width: 200px;
+    top: -20px;
+    left: -20px;
+  }
+
+  .hero-front {
+    width: 200px;
+    top: -40px;
+    left: -60px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero {
+    padding-bottom: 0px;
+  }
+  .col {
+    margin-bottom: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .row {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-content-inner {
+    max-width: 400px;
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+
+  .hero-content-inner h1 {
+    width: 250px;
+    font-size: 15px;
+  }
+
+  .hero-content-line {
+    height: 45px;
+  }
+
+  .hero-images {
+    margin-top: 50px;
+  }
+
+  .hero-back {
+    width: 170px;
+    top: -20px;
+    left: -20px;
+  }
+  .hero-front {
+    width: 170px;
+    top: -40px;
+    left: -70px;
+  }
+}
