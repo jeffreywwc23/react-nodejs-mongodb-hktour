@@ -41,7 +41,9 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm
   });
 
-  const url = `${req.protocol}://${req.get('host')}/`;
+  // const url = `${req.protocol}://${req.get('host')}/`;
+  console.log(req);
+  const url = `${req.header('origin')}`;
 
   await new Email(newUser, url).sendMail();
 
@@ -60,6 +62,47 @@ exports.login = catchAsync(async (req, res, next) => {
 
   if (!user || !(await user.correctPassword(password, user.password))) {
     return next(new AppError('Incorrect email or password', 401));
+  }
+
+  // 3) If everything ok, send token to client
+  createSendToken(user, 200, req, res);
+});
+
+exports.googlelogin = catchAsync(async (req, res, next) => {
+  const { email, googleId } = req.body;
+  console.log(req.body);
+
+  // 1) Check if email and password exist
+  if (!email || !googleId) {
+    return next(new AppError('Google sign in fail', 400));
+  }
+  // 2) Check if user exists && password is correct
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    return next(new AppError('Invalid account! Please sign up first', 400));
+  }
+
+  // 3) If everything ok, send token to client
+  createSendToken(user, 200, req, res);
+});
+
+exports.facebooklogin = catchAsync(async (req, res, next) => {
+  const { email, userID } = req.body;
+
+  console.log(req);
+  console.log(req.body);
+
+  // 1) Check if email and password exist
+  // if (!email || !userID) {
+  if (!email) {
+    return next(new AppError('Facebook sign in fail', 400));
+  }
+  // 2) Check if user exists && password is correct
+  const user = await User.findOne({ email });
+
+  if (!user) {
+    return next(new AppError('Invalid account! Please sign up first', 400));
   }
 
   // 3) If everything ok, send token to client
@@ -180,8 +223,6 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
     // const resetURL = `${req.protocol}://${req.get(
     //   'host'
     // )}/api/v1/users/resetPassword/${resetToken}`;
-
-    // const reqReferer = req.headers.referer;
     // const reqIP = req.header('x-forwarded-for');
     const reqOrigin = req.header('origin');
 

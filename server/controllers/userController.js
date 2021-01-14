@@ -1,11 +1,12 @@
 /* eslint-disable */
 const multer = require('multer');
 const sharp = require('sharp');
+const Tour = require('../models/tourModel');
 const User = require('./../models/userModel');
+const Booking = require('../models/bookingModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const factory = require('./handlerFactory');
-
 
 //store in memory as a buffer rather than in disk, the file name will not get set
 const multerStorage = multer.memoryStorage();
@@ -100,6 +101,22 @@ exports.createUser = (req, res) => {
     message: 'This route is not defined! Please use /signup instead'
   });
 };
+
+exports.getMyTours = catchAsync(async (req, res, next) => {
+  // 1) Find all bookings
+  const bookings = await Booking.find({ user: req.user.id });
+
+  // 2) Find tours with the returned IDs
+  const tourIDs = bookings.map(el => el.tour);
+  // select all the tours which have an ID which is in the tourIDs array
+  const tours = await Tour.find({ _id: { $in: tourIDs } });
+
+  res.status(200).send({
+    tours
+  });
+});
+
+
 
 exports.getUser = factory.getOne(User);
 exports.getAllUsers = factory.getAll(User);

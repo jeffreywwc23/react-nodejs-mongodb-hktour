@@ -1,52 +1,52 @@
 [
   {
-    "_id": "5c8a1d5b0190b214360dc057",
-    "name": "Kelvin Craig",
+    "_id": "5fe5bd06e5be4130cc7d3fad",
+    "name": "Jeffrey Wong",
     "email": "admin@example.com",
     "role": "admin",
     "active": true,
     "photo": "user-1.jpg",
-    "password": "$2a$12$vQY6MlmR4RAxJaIlcab39.f6yKybSSIBDrtXMcxPF7V0V0Fm.9JxW"
+    "password": "$2a$12$yKiPT0G540DWJ9wONnpvt.5bAkaJKrtoYuLHoR5fOSEtLjkkXgq9u"
   },
   {
     "_id": "5c8a1dfa2f8fb814b56fa181",
-    "name": "Lourdes Browning",
+    "name": "Karl Lou",
     "email": "loulou@example.com",
     "role": "user",
     "active": true,
     "photo": "user-2.jpg",
-    "password": "$2a$12$0APT7Zm1Bt6rFthun34bx.ibfxinWGR.fBTFNdKnPW7vXihRUyT02"
+    "password": "$2a$12$71GGgscJ272b6nLU3TriD.AJg3UV84ICxHlWCtiFLnf71L47335uW"
   },
   {
     "_id": "5c8a1e1a2f8fb814b56fa182",
-    "name": "Sophie Louise Hart",
+    "name": "Sophie Tang",
     "email": "sophie@example.com",
     "role": "user",
     "active": true,
     "photo": "user-3.jpg",
-    "password": "$2a$12$62SWz99pSMhysQ.WG35tceD7azZHYOi2dy9jADPh2v6WuMClGWVJC"
+    "password": "$2a$12$9kjT4N8tWr3aXaNQ5x/2E..3adVPFicq7UEomf9aYTZdf4b.A30OW"
   },
   {
     "_id": "5c8a1ec62f8fb814b56fa183",
-    "name": "Ayla Cornell",
-    "email": "ayls@example.com",
+    "name": "Chris Lee",
+    "email": "chrislee@example.com",
     "role": "user",
     "active": true,
     "photo": "user-4.jpg",
-    "password": "$2a$12$VwW5mRimOqf6YfyF1/vT.eTTGmTyy.8ivaWuYvNvOAJ7fP/0sQuB6"
+    "password": "$2a$12$d5vy8MCjq.EBDOBvFSQ8N.rJHHtgAeiUG36vMvieO09yEevANxlIO"
   },
   {
     "_id": "5c8a1f292f8fb814b56fa184",
-    "name": "Leo Gillespie",
+    "name": "Leo Shek",
     "email": "leo@example.com",
     "role": "guide",
     "active": true,
     "photo": "user-5.jpg",
-    "password": "$2a$12$w.IWy7r/Owyg3ndaYtgH7eSrC5ZV2cY6npZx50L2XAVG.yNCRiCY6"
+    "password": "$2a$12$KcW/XaIoereD/kOBeLGieu9NBBrTT6ghaqPDpcrmo/3jhdKLwvige"
   },
   {
     "_id": "5c8a1f4e2f8fb814b56fa185",
-    "name": "Jennifer Hardy",
+    "name": "Jennifer Chan",
     "email": "jennifer@example.com",
     "role": "guide",
     "active": true,

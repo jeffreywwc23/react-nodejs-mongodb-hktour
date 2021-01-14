@@ -56,8 +56,9 @@ app.post(
 );
 
 // Body parser, reading data from body into req.body
+// middleware -> parse data coming from a URL encoded form.
 app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' })); // middleware -> parse data coming from a URL encoded form.
+app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
@@ -89,7 +90,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/', viewRouter);
+app.use('/api/v1/view', viewRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
