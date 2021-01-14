@@ -1,41 +1,47 @@
 import React from 'react';
 import './Overview.css';
-
-import CardData from '../../dev-data/data/tours.json';
+import { connect } from 'react-redux';
 import OverviewCards from '../../components/OverviewCards/OverviewCards';
 import Footer from '../../components/Footer/Footer';
+import Spinner from '../../components/Spinner/Spinner';
 
-class Overview extends React.Component {
-    constructor(props) {
-        super(props);
+const Overview = (props) => {
+    let { loading, tours } = props
+    const toursDataArray = tours.tourState.data;
 
-        this.state = {
-            tours: CardData,
-        }
-    }
+    return (
+        <>
+            {
+                loading || !toursDataArray ?
+                    <Spinner />
+                    :
+                    <>
+                        <section className="overview">
+                            <main className="overview-main">
+                                <h1 className="overview-title">Tours Overview</h1>
+                                <div className="card-container">
+                                    {
+                                        toursDataArray.map(({ ...otherProps }) => {
+                                            return <OverviewCards key={otherProps._id} {...otherProps} />
+                                        })
+                                    }
+                                </div>
+                            </main>
+                        </section>
+                        <Footer />
+                    </>
+            }
 
-    render() {
-        const { tours } = this.state;
-
-        return (
-            <>
-                <section className="overview">
-                    <main className="main">
-                        <h1 className="overview-title">Tours Overview</h1>
-                        <div className="card-container">
-                            {
-                                tours.map(({ ...otherProps }) => {
-                                    return <OverviewCards key={otherProps._id} {...otherProps} />
-                                })
-                            }
-                        </div>
-                    </main>
-                </section>
-                <Footer />
-            </>
-        );
-    }
+        </>
+    );
 }
 
-export default Overview;
+
+const mapStateToProps = (state) => ({
+    tours: state.tourContainer,
+});
+
+export default connect(
+    mapStateToProps,
+)(Overview);
 

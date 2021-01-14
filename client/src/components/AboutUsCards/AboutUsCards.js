@@ -1,13 +1,11 @@
 import React from 'react';
 import './AboutUsCards.css';
 
-import video from '../../assets/img/video.mp4';
-
 export default function AboutUsCards() {
     return (
         <div className="banner">
             <video muted autoPlay loop type="mp4">
-                <source src={video} type="video/mp4" />
+                <source src='https://res.cloudinary.com/reacthktour/video/upload/v1610544479/react-hktour/video_invjdw.mp4' type="video/mp4" />
             </video>
 
             <div className="textBox">
@@ -19,7 +17,7 @@ export default function AboutUsCards() {
             </div>
 
             <div className="videoBox">
-                <video src={video} muted autoPlay loop type="mp4"></video>
+                <video src='https://res.cloudinary.com/reacthktour/video/upload/v1610544479/react-hktour/video_invjdw.mp4' muted autoPlay loop type="mp4"></video>
             </div>
         </div>
     )

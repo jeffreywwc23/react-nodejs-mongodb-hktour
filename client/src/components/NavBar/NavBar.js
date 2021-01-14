@@ -9,7 +9,6 @@ import { LogOutAction } from '../../redux/User/User.actions';
 
 function NavBar(props) {
     const { user, logout } = props;
-
     const history = useHistory();
 
     const [click, setClick] = useState(false);
@@ -81,7 +80,7 @@ function NavBar(props) {
 };
 
 const mapStateToProps = (state) => ({
-    user: state.user,
+    user: state.userContainer,
 });
 
 const mapDispatchToProps = (dispatch) => {

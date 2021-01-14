@@ -26,7 +26,6 @@ function SignUp(props) {
             ...userSignUpState,
             [name]: value,
         })
-        console.log('from handleSignUpChange', value);
     }
 
     const handleSignUpSubmit = async e => {

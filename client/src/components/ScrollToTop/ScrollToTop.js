@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useWindowScroll } from 'react-use';
-
 import './ScrollToTop.css';
 import { FaCaretUp } from 'react-icons/fa'
 

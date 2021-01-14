@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import './Hero.css';
 import { TweenMax, TimelineLite, Power3 } from 'gsap';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import arrow from '../../assets/img/arrow-right.svg';
-import hero1 from '../../assets/img/hero1.jpg';
-import hero2 from '../../assets/img/hero2.jpg';
 
 export default React.memo(function Hero() {
     let hero = useRef(null);
@@ -24,10 +24,10 @@ export default React.memo(function Hero() {
         TweenMax.to(hero, 0, { css: { visibility: 'visible' } })
 
         tl.from(hkImage, 1.2, { x: 1280, ease: Power3.easeOut }, 'Start')
-            .from(hkImage.firstElementChild, 2, { scale: 1.6, ease: Power3.easeOut }, 0.2)
+            .from(hkImage, 2, { scale: 1.6, ease: Power3.easeOut }, 0.2)
 
             .from(jpImage, 1.2, { x: 1280, ease: Power3.easeOut }, 0.2)
-            .from(jpImage.firstElementChild, 2, { scale: 1.6, ease: Power3.easeOut }, 0.2)
+            .from(jpImage, 2, { scale: 1.6, ease: Power3.easeOut }, 0.2)
 
         tl.staggerFrom([headlineFirst.children, headlineSecond.children, headlineThird.children], 1, {
             y: 44,
@@ -79,12 +79,19 @@ export default React.memo(function Hero() {
                         <div className='col'>
                             <div className="hero-images">
                                 <div className="hero-images-inner" ref={el => images = el}>
-                                    <div className="hero-image">
-                                        <img className="hero-back" src={hero1} alt="jp1" />
-                                    </div>
-                                    <div className="hero-image">
-                                        <img className="hero-front" src={hero2} alt="jp2" />
-                                    </div>
+                                    <LazyLoadImage
+                                        effect="blur"
+                                        className="hero-back"
+                                        alt="hk1"
+                                        src='https://res.cloudinary.com/reacthktour/image/upload/v1610526236/react-hktour/hongkong2_swhop5.png'
+                                    />
+                                    <LazyLoadImage
+                                        effect="blur"
+                                        className="hero-front"
+                                        alt="jp1"
+                                        src='https://res.cloudinary.com/reacthktour/image/upload/v1610526239/react-hktour/japan_f2hqgv.png'
+                                    />
+
                                 </div>
                             </div>
                         </div>

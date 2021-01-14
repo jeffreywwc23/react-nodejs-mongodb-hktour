@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectBoxModel = state => state.boxModel;
+const selectBoxModel = state => state.boxModelContainer;
 
 export const selectBoxModelSelector = createSelector(
     [selectBoxModel],
-    boxModel => boxModel.boxContent
+    boxModelContainer => boxModelContainer.boxContent
 );

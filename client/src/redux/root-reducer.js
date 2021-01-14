@@ -8,12 +8,12 @@ import featureToursReducer from './FeatureTours/FeatureTours.reducer.jsx';
 import servicesReducer from './Services/Services.reducer.jsx';
 
 const rootReducer = combineReducers({
-    user: userReducer,
-    tour: tourReducer,
-    imageGallery: imageGalleryReducer,
-    boxModel: boxModelReducer,
-    featureTours: featureToursReducer,
-    services: servicesReducer,
+    userContainer: userReducer,
+    tourContainer: tourReducer,
+    imageGalleryContainer: imageGalleryReducer,
+    boxModelContainer: boxModelReducer,
+    featureToursContainer: featureToursReducer,
+    servicesContainer: servicesReducer,
 });
 
 export default rootReducer;

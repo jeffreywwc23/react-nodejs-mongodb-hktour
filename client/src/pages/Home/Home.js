@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Hero from '../../components/Hero/Hero';
 import BoxModel from '../../components/BoxModel/BoxModel';
 import FeatureTours from '../../components/FeatureTours/FeatureTours';

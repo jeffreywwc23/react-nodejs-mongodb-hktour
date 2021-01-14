@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectImageGallery = state => state.imageGallery;
+const selectImageGallery = state => state.imageGalleryContainer;
 
 export const selectImageGallerySelector = createSelector(
     [selectImageGallery],
-    imageGallery => imageGallery.imageGalleryContent
+    imageGalleryContainer => imageGalleryContainer.imageGalleryContent
 );

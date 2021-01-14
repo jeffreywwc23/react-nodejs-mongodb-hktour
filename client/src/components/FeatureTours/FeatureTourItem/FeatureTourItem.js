@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function FeatureTourItem(props) {
     return (
@@ -8,7 +9,8 @@ function FeatureTourItem(props) {
             <li className='feature-tours-single-item'>
                 <Link className='feature-tours-single-item-link' to={props.path}>
                     <figure className='feature-tours-single-item-pic-wrap' data-category={props.label}>
-                        <img
+                        <LazyLoadImage
+                            effect="blur"
                             className='feature-tours-single-item-image'
                             alt='FeatureTourItemImage'
                             src={props.src}

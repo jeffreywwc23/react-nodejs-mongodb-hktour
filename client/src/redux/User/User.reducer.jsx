@@ -2,6 +2,7 @@ import UserActionTypes from './User.types';
 
 const INITITAL_STATE = {
     userState: [],
+    userBooking: [],
     isLogin: false,
     hasError: false,
 }
@@ -56,6 +57,27 @@ const userReducer = (state = INITITAL_STATE, action) => {
                 isLogin: true,
             }
 
+        case UserActionTypes.GET_BOOKING_DATA_SUCCESS:
+            return {
+                ...state,
+                userBooking: action.payload,
+                isLogin: true,
+            }
+
+        case UserActionTypes.GOOGLE_LOGIN_SUCCESS:
+            return {
+                userState: action.payload,
+                isLogin: true,
+                hasError: false,
+            }
+
+        case UserActionTypes.FACEBOOK_LOGIN_SUCCESS:
+            return {
+                userState: action.payload,
+                isLogin: true,
+                hasError: false,
+            }
+
         /**/
         case UserActionTypes.LOGIN_FAIL:
             return {
@@ -101,6 +123,25 @@ const userReducer = (state = INITITAL_STATE, action) => {
                 isLogin: true,
                 hasError: true,
             }
+
+        case UserActionTypes.GET_BOOKING_DATA_FAIL:
+            return {
+                ...state,
+                isLogin: true,
+                hasError: true,
+            }
+
+        case UserActionTypes.GOOGLE_LOGIN_FAIL:
+            return {
+                ...state,
+                hasError: true,
+            };
+
+        case UserActionTypes.FACEBOOK_LOGIN_FAIL:
+            return {
+                ...state,
+                hasError: true,
+            };
 
         default:
             return state;

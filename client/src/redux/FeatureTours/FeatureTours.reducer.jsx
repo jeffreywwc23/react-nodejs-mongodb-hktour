@@ -21,7 +21,7 @@ export const INITIAL_STATE = {
         {
             id: 4,
             text: 'Diging into the history and ancient culture',
-            imageUrl: 'https://www.redbrick.me/wp-content/uploads/2019/01/sorasak-252182-unsplash.jpg',
+            imageUrl: 'https://images.pexels.com/photos/1313814/pexels-photo-1313814.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
             label: 'Cultural'
         },
         {

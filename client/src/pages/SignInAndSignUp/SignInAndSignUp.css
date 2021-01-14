@@ -17,7 +17,6 @@
   box-sizing: border-box;
   background: #fff;
   overflow: hidden;
-  /* box-shadow: 0 16px 32px black; */
   border-radius: 3px;
   -webkit-box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 26px 2px rgba(0, 0, 0, 0.5);
@@ -78,23 +77,8 @@
   background: black;
 }
 
-/* .sign-form label {
-    display: block;
-    width: 260px;
-    margin: 25px auto;
-    text-align: center;
-  }
-  
-  .sign-form label span {
-    font-size: 14px;
-    font-weight: 600;
-    color: #505f75;
-    text-transform: uppercase;
-  } */
-
 .sub-container .image {
   width: 100%;
-  /* width: 260px; */
   height: 100%;
   overflow: hidden;
   z-index: 2;
@@ -111,7 +95,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-image: url(../../assets/img/tours/tour-4-1.jpg);
+  background-image: url("https://images.pexels.com/photos/597909/pexels-photo-597909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
   background-size: cover;
   transition: -webkit-transform 1.2s ease-in-out;
   transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
@@ -268,14 +252,6 @@
   align-items: center;
 }
 
-/* .sign-wrapper .sign-up-container {
-  pointer-events: none;
-}
-
-.sign-wrapper.active .sign-up-container {
-  pointer-events: initial;
-} */
-
 /* animation */
 .sign-wrapper.active .sub-container {
   -webkit-transform: translateX(-480px);
@@ -317,34 +293,6 @@
   transform: translateY(-72px);
 }
 
-/* .sign-wrapper .sign-up-container .form-container {
-  -webkit-transform: translateX(-960px);
-  transform: translateX(-960px);
-  -webkit-transition: -webkit-transform 1.2s ease-in-out;
-  transition: transform 1.2s ease-in-out;
-}
-
-.sign-wrapper.active .sign-up-container .form-container {
-  -webkit-transform: translateX(320px);
-  transform: translateX(320px);
-  -webkit-transition: -webkit-transform 1.2s ease-in-out;
-  transition: transform 1.2s ease-in-out;
-} */
-
-/* .sign-wrapper .login-container .form-container {
-  -webkit-transform: translateX(0px);
-  transform: translateX(0px);
-  -webkit-transition: -webkit-transform 1.2s ease-in-out;
-  transition: transform 1.2s ease-in-out;
-}
-
-.sign-wrapper.active .login-container .form-container {
-  -webkit-transform: translateX(1280px);
-  transform: translateX(1280px);
-  -webkit-transition: -webkit-transform 1.2s ease-in-out;
-  transition: transform 1.2s ease-in-out;
-} */
-
 @media only screen and (max-width: 991px) {
   .sign-wrapper {
     max-width: 600px;
@@ -371,10 +319,6 @@
   .sign-wrapper {
     max-width: 400px;
   }
-
-  /* .login-container {
-    width: 400px;
-  } */
 
   .sign-wrapper .sign-form .form-container {
     width: 100%;

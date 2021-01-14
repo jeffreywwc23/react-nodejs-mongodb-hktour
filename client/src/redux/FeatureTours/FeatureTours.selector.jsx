@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectFeatureTours = state => state.featureTours;
+const selectFeatureTours = state => state.featureToursContainer;
 
 export const selectFeatureToursSelector = createSelector(
     [selectFeatureTours],
-    featureTours => featureTours.featureToursContent
+    featureToursContainer => featureToursContainer.featureToursContent
 );

@@ -13,7 +13,7 @@ import rootReducer from './root-reducer';
 const persistConfig = {
     key: 'root',
     storage: storage,
-    whitelist: ['user']
+    whitelist: ['userContainer']
 };
 
 const middlewares = [thunk, logger];

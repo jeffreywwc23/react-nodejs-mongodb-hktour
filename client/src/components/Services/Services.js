@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectServicesSelector } from '../../redux/Services/Services.selector';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 function Services({ servicesContent }) {
     return (
         <section className="services-container">
@@ -20,7 +23,11 @@ function Services({ servicesContent }) {
                             return (
                                 <div className="services-box" key={singleService.id}>
                                     <div className="bar"></div>
-                                    <img src={singleService.imageUrl} alt={singleService.title}></img>
+                                    <LazyLoadImage
+                                        effect="blur"
+                                        src={singleService.imageUrl}
+                                        alt={singleService.title}
+                                    />
                                     <h1 data-title={singleService.title} className="fill-text">{singleService.title}</h1>
                                     <p>{singleService.text}</p>
                                     <Link to="/" className="services-btn">More</Link>

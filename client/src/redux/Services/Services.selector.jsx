@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectServices = state => state.services;
+const selectServices = state => state.servicesContainer;
 
 export const selectServicesSelector = createSelector(
     [selectServices],
-    services => services.servicesContent
+    servicesContainer => servicesContainer.servicesContent
 );
